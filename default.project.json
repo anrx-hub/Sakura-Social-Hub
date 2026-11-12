@@ -1,0 +1,16 @@
+{
+  "name": "SakuraSocialHub",
+  "tree": {
+    "$className": "DataModel",
+    "Workspace": {
+      "$properties": {
+        "StreamingEnabled": true
+      }
+    },
+    "ServerScriptService": {
+      "SakuraHubBuilder": {
+        "$path": "src/ServerScriptService/SakuraHubBuilder.server.lua"
+      }
+    }
+  }
+}
