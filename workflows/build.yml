@@ -1,0 +1,24 @@
+
+name: Build Roblox place
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Roblox/setup-rojo@v1
+        with:
+          version: 7.4.4
+
+      - run: rojo build default.project.json --output SakuraSocialHub.rbxlx
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SakuraSocialHub
+          path: SakuraSocialHub.rbxlx
